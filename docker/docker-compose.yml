@@ -1,0 +1,14 @@
+version: "3.3"
+
+services:
+  ruby-rails:
+    container_name: ruby-rails 
+    stdin_open: true
+    tty: true
+    build:
+      dockerfile: ./docker/Dockerfile
+      context: ../.
+    volumes: 
+      - "./../:/app"
+    ports:
+      - 3000:3000
